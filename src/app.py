@@ -19,7 +19,7 @@ migrate = Migrate()
 class User(db.Model):
     __tablename__ = 'user'
     id: Mapped[int] = mapped_column(sa.Integer, primary_key=True)
-    username: Mapped[str] = mapped_column(sa.String, unique=True, nullable=False),
+    username: Mapped[str] = mapped_column(sa.String, unique=True, nullable=False)
     active: Mapped[bool] = mapped_column(sa.Boolean, default=True)
 
     def __repr__(self) -> str:
